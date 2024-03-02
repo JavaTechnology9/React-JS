@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CommentBox from './WithJSX/CommentBox';
+import Secret from './State/Secret';
+import ShallowMerge from './State/ShallowMerge';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,6 +34,8 @@ root.render(
   <React.StrictMode>
     <App />
     <CommentBox comments={data.comments} post={data.post}/>
+    <Secret/>
+    <ShallowMerge/>
   </React.StrictMode>
 );
 // Initial commit
