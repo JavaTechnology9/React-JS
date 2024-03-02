@@ -3,15 +3,34 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Post from './Post';
-import CreateComment from './CreateComment';
+import CommentBox from './CommentBox';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const data = {
+  post: {
+      id: 123,
+      user: 'Normando',
+      content: 'What we hope ever to do with ease, we must first learn to do with diligence. — Samuel Johnson'
+  },
+  comments: [
+      {
+          id: 0,
+          user: 'David',
+          content: 'such. win.'
+      }, {
+          id: 1,
+          user: 'Haley',
+          content: 'Love it.'
+      }, {
+          id: 3,
+          user: 'Mitchell',
+          content: '@Peter get off Letters and do your homework'
+      }]
+};
 root.render(
   <React.StrictMode>
     <App />
-    <Post id="ABC" user="Mark" content="Facebook Post"/>
-    <CreateComment user="Suresh" content="Comment"/>
+    <CommentBox comments={data.comments} post={data.post}/>
   </React.StrictMode>
 );
 // Initial commit

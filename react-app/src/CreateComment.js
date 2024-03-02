@@ -4,7 +4,7 @@ export default class CreateComment extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            context: '',
+            content: '',
             user: ''
         };
         this.handleUserChange=this.handleUserChange.bind(this);
@@ -17,12 +17,16 @@ export default class CreateComment extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.setState(()=>({user:'',context:''}));
+        this.props.onCommentSubmit({
+            user: this.state.user.trim(),
+            content: this.state.content.trim()
+        });
+        this.setState(()=>({user:'',content:''}));
 
     }
     handleTextChange(e){
-        const uservalue=e.target.value;
-        this.setState(()=>({context:uservalue}));
+        const context=e.target.value;
+        this.setState(()=>({content:context}));
     }
     render() {
         return React.createElement("form", { className: "createForm",onSubmit: this.handleSubmit },
