@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CommentBox from './CommentBox';
+import CommentBox from './WithJSX/CommentBox';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const data = {
