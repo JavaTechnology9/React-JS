@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import CommentBox from './WithJSX/CommentBox';
 import Secret from './State/Secret';
 import ShallowMerge from './State/ShallowMerge';
-
+import Counter from './Props/Counter';
+import Greeting from './Stateless-Component/Greeting'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const data = {
@@ -36,6 +37,8 @@ root.render(
     <CommentBox comments={data.comments} post={data.post}/>
     <Secret/>
     <ShallowMerge/>
+    <Counter incrementBy={10}/>
+    <Greeting for="Mark"/>
   </React.StrictMode>
 );
 // Initial commit
