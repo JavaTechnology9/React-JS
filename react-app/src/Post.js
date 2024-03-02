@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class Post extends React.Component {
     render() {
@@ -8,4 +9,7 @@ export default class Post extends React.Component {
                 React.createElement("span", { className: "postSpan" }, this.props.content))
         );
     }
+}
+Post.proptype={
+    id: PropTypes.number.isRequired
 }

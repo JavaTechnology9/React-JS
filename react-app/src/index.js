@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Post from './Post';
+import CreateComment from './CreateComment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Post id="123" user="Mark" content="Facebook Post"/>
+    <Post id="ABC" user="Mark" content="Facebook Post"/>
+    <CreateComment user="Suresh" content="Comment"/>
   </React.StrictMode>
 );
 // Initial commit
